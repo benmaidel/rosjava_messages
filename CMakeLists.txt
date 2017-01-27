@@ -17,6 +17,7 @@ generate_rosjava_messages(
     rosgraph_msgs            # ros/ros_comm_msgs
     std_srvs
     rosjava_test_msgs        # rosjava/rosjava_test_msgs
+    actionlib           # ros/common_msgs
     actionlib_msgs           # ros/common_msgs
     common_msgs
     diagnostic_msgs
@@ -44,8 +45,18 @@ generate_rosjava_messages(
     scheduler_msgs
     move_base_msgs           # ros-planning/navigation
     map_store                # ros-planning/map_store
-
+    afkar_msgs
+    afkar_obdcan
+    cob_light
+    cob_script_server
+    cob_android_msgs
+    cob_msgs
+    control_msgs
+    tf
     roscpp                   # !!!!!!! REMOVE THIS ONCE https://github.com/ros-planning/navigation/pull/312 is fixed! !!!!!!!!
+    cob_sound
+    cob_srvs
+    msh_msgs
 )
 
 catkin_package()
@@ -54,5 +65,5 @@ catkin_package()
 # Installation
 ##############################################################################
 
-install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_MAVEN_DESTINATION}/org/ros/rosjava_messages/ 
+install(DIRECTORY ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_MAVEN_DESTINATION}/org/ros/rosjava_messages/
         DESTINATION ${CATKIN_GLOBAL_MAVEN_DESTINATION}/org/ros/rosjava_messages)
